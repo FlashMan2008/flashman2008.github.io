@@ -322,7 +322,7 @@ body {
 	content: "";
 	width: calc(100% + 60px);
 	height: 1px;
-	background-color: lightblue;
+	background-color: #e0e0e0;
 	position: relative;
 	left: -30px;
 	margin-top: 20px;
