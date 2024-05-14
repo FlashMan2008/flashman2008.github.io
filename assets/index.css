@@ -270,11 +270,16 @@ body {
 }
 
 .wrapper {
-	/* margin: auto; */
 	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: all 0.5s ease;
+}
+
+.wrapper.hidden {
+	filter: blur(10px);
+	transition: all 0.5s ease;
 }
 
 .container {
@@ -294,10 +299,6 @@ body {
 	width: 100px;
 	border-radius: 50%;
 	box-shadow: 0 0 5px gray;
-	/* position: relative; */
-	/* left: 0;
-	right: 0;
-	margin: auto; */
 	margin: 0 auto;
 }
 
@@ -371,6 +372,7 @@ body {
 }
 
 .window.intro {
+	z-index: 1000;
 	width: 80%;
 	height: 200%;
 	top: 200%;
@@ -396,7 +398,6 @@ body {
 
 .content.intro2 {
 	display: flex;
-	/* word-wrap: break-word; */
 }
 
 .text2 {
