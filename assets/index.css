@@ -270,8 +270,7 @@ body {
 }
 
 .wrapper {
-	margin: auto;
-	/* width: 200px; */
+	/* margin: auto; */
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -280,6 +279,11 @@ body {
 
 .container {
 	margin-bottom: 200px;
+}
+
+.avatar {
+	height: min-content;
+	margin: auto;
 }
 
 .avatar.center {
@@ -368,8 +372,8 @@ body {
 
 .window.intro {
 	width: 80%;
-	height: calc(100% - 50px);
-	top: calc(100% + 100px);
+	height: 200%;
+	top: 200%;
 	left: 10%;
 	position: absolute;
 	background-color: inherit;
@@ -392,6 +396,7 @@ body {
 
 .content.intro2 {
 	display: flex;
+	/* word-wrap: break-word; */
 }
 
 .text2 {
@@ -402,6 +407,8 @@ body {
 
 .buttons.together {
 	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .buttons.together svg {
@@ -419,4 +426,45 @@ body {
 
 .buttonintro {
 	font-size: 1em;
+}
+
+.cross {
+	position: absolute;
+	top: 70px;
+	right: 70px;
+	color: lightblue;
+}
+
+.cross svg {
+	height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	.window.intro {
+		width: 90%;
+		left: 5%;
+		border-top-left-radius: 30px;
+		border-top-right-radius: 30px;
+	}
+	.box.intro {
+		margin: 30px 30px;
+		width: calc(100% - 60px);
+	}
+	.button.intro {
+		margin: 0 0;
+	}
+	.buttons.together {
+		display: block;
+	}
+	.cross {
+		top: 20px;
+		right: 20px;
+	}
+	.content.line:before {
+		width: calc(100% + 20px);
+		left: -10px;
+	}
+	.window.intro.active {
+		top: 150px;
+	}
 }
